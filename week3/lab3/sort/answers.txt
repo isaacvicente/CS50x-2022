@@ -1,0 +1,18 @@
+sort1 uses: bubble sort
+
+How do you know?: As explained in class, Bubble Sort has a n² big O notation, which doesn't differentiate it much from Selection Sort. However, as demonstrated at the end of the lesson, Bubble Sort took much longer than Selection Sort, which applies to empirical tests:
+Bubble Sort: ~ 8.8s
+Selection Sort: ~ 4.6s
+
+sort2 uses: merge sort
+
+How do you know?: This one was easy, because compared to Bubble Sort, Merge Sort, on a random list of numbers, was stupidly faster:
+Bubble Sort: ~ 8.5s
+Merge Sort: ~ 1.5s
+
+sort3 uses: selection sort
+
+How do you know?: Well, in addition to what has already been explained, to really differentiate the Bubble Sort and Selection Sort algorithms, I had to evaluate how they perform in the best case: when the list of numbers is already sorted. As we know, the Omega notation for Bubble Sort is n while for Selection Sort it is n². So Bubble Sort would be much faster than Selection Sort on an ordered list, which has been observed:
+Bubble Sort: ~ 1.4s
+Selection Sort: ~ 4.2s
+

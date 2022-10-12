@@ -1,0 +1,4 @@
+-- The original query (the one until the name conditions) gives us all the movies Johnny Depp or Helena Bonham Carter starred in
+-- That way, the movie's title list will give us some duplicates, as may Johnny starred in some movie that Helena did as well (they both starred in the same movie)
+-- So, to know the movies both starred, we just need to get the duplicates, which is done by "GROUP BY movies.title HAVING COUNT(movies.title) > 1", i.e., group the movie's titles in such way that they were count more than once
+SELECT title FROM movies INNER JOIN stars ON movies.id = stars.movie_id INNER JOIN people ON people.id = stars.person_id WHERE people.name = "Johnny Depp" OR people.name = "Helena Bonham Carter" GROUP BY movies.title HAVING COUNT(movies.title) > 1;
